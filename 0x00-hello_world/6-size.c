@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * My second, C task
+ *
  * Return: return 0 after execution
  */
 int main(void)
