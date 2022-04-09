@@ -7,7 +7,7 @@
 int main(void)
 {
 int dg;
-for (dg = 40; dg <= 57; dg++)
+for (dg = 48; dg <= 57; dg++)
 {
 putchar(dg);
 if (dg == 57)
