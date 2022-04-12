@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * -islower - Short description
+ * _islower - character copmarison
  * c: values to be compared
  * Return: Always 0
  */
