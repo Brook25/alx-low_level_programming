@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _islower - character copmarison
- * c: values to be compared
+ * @c: values to be compared
  * Return: Always 0
  */
 int _islower(int c)
