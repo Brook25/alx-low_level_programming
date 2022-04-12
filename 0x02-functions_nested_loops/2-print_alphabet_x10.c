@@ -12,7 +12,7 @@ int count;
 count = 0;
 while (count < 10)
 {
-for (alphabet = 'a', alphabet <= 'z'; alphabet++)
+for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 {
 _putchar(alphabet);
 }
