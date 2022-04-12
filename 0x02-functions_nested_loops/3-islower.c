@@ -1,4 +1,4 @@
-#include "mian.h"
+#include "main.h"
 /**
  * -islower - Short description
  * c: values to be compared
