@@ -5,7 +5,7 @@
  *@n: the number where counting starts
  * Return: Always 0
  */
-voint print_to_98(int n
+voint print_to_98(int n)
 {
 if (n < 98)
 {
