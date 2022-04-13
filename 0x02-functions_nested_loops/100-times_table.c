@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_times_table - print time tables for n
+ * print_times_table - print the times table for n
  *@n: the multiplication table request
  * Return: Always 0
  */
