@@ -5,11 +5,11 @@
  *
  * Return: Always 0
  */
-void print_times_table(int n)
+int main(void)
 {
 int i, res;
 
-for (i = 0; 1 < 1024; i++
+for (i = 0; 1 < 1024; i++)
 if (i % 3 == 0 || i % 5 ==0)
 res += i;
 printf("%d\n", res);
