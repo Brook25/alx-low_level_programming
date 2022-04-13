@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-unsigned long count,i, j, k, sums;
+unsigned long count, i, j, k, sums;
 i = sums = 0;
 j = 1;
 for (count = 0; count < 50; count++)
@@ -22,4 +22,4 @@ sum += k;
 }
 printf("%lu\n", sums);
 return (0);
-
+}
