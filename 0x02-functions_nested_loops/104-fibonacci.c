@@ -27,7 +27,7 @@ while (count <= 98)
 {
 carry = (m + n) / 1000;
 p = (m + n) - carry * 1000;
-k = (i + j) + carry;
+k = (i + j) +carry;
 m = n;
 n = p;
 i = j;
