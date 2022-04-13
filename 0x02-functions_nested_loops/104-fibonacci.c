@@ -32,7 +32,7 @@ k = (i + j) + carry;
 m = n;
 n = p;
 i = j;
-j = j;
+j = k;
 if (p >= 100)
 printf("%lu%lu", k, p);
 else
