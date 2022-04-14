@@ -2,18 +2,18 @@
 /**
  * more_numbers - prints numbers 10 to 14 10 times
  *
- * Return: Always (0)
+ * Return: Always 0
  */
 void more_numbers(void)
 {
-int a;
+int i;
 int num1;
 int num2;
 int result;
 
-a = 0;
+i = 0;
 result = 0;
-while (a < 10)
+while (i < 10)
 {
 while (result <= 14)
 {
@@ -32,9 +32,9 @@ _putchar (num2 + '0');
 
 result++;
 }
-a++;
+i++;
 result = 0;
-_ptuchar ('\n');
+_putchar ('\n');
 }
 
 }
