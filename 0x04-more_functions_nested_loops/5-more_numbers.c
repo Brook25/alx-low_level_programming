@@ -25,13 +25,14 @@ else
 {
 num1 = res / 10;
 num2 = res % 10;
-_putchar (num1 + '0')
+_putchar (num1 + '0');
 }
-_putchar (num2 + '0')
+
+_putchar (num2 + '0');
 res++;
 }
 a++;
 result = 0;
-_ptuchar('\n')
+_ptuchar('\n');
 }
 }
