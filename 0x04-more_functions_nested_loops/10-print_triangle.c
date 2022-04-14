@@ -19,11 +19,11 @@ for (a = b; a > 0; a--)
 {
 _putchar (' ');
 }
-for (p = 0; p <= 1; p++)
+for (c = 0; c <= 1; c++)
 {
 _putchar (35);
 }
-d--;
+b--;
 _putchar ('\n');
 }
 }
