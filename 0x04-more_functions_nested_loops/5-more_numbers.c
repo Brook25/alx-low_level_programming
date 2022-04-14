@@ -32,7 +32,7 @@ _putchar (num2 + '0');
 res++;
 }
 a++;
-result = 0;
+res = 0;
 _ptuchar('\n');
 }
 }
