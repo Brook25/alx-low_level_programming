@@ -2,7 +2,7 @@
 /**
  * print_line - prints a straight line
  *@n: print num
- * Return: 0
+ * Return: Always 0
  */
 void print_line(int n)
 {
@@ -13,10 +13,10 @@ for (i = 0; i < n; i++)
 {
 _putchar (95);
 }
-putchar ('\n');
+_putchar ('\n');
 }
 else 
 {
-putchar ('\n');
+_putchar ('\n');
 }
 }
