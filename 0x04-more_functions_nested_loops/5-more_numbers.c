@@ -9,30 +9,32 @@ void more_numbers(void)
 int a;
 int num1;
 int num2;
-int res;
+int result;
 
 a = 0;
-res = 0;
+result = 0;
 while (a < 10)
 {
-while (res <= 14)
+while (result <= 14)
 {
-if (res < 10)
+if (result < 10)
 {
-num2 = res;
+num2 = result;
 }
 else
 {
-num1 = res / 10;
-num2 = res % 10;
+num1 = result / 10;
+num2 = result % 10;
 _putchar (num1 + '0');
 }
 
 _putchar (num2 + '0');
-res++;
+
+result++;
 }
 a++;
-res = 0;
-_ptuchar('\n');
+result = 0;
+_ptuchar ('\n');
 }
+
 }
