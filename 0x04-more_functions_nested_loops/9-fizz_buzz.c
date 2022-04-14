@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Fizz for 3,Buzz for 5
+ * main - Entry point
  *
  * Return: Always 0
  */
@@ -8,6 +8,7 @@ int main(void)
 {
 int b = 100;
 int i;
+
 i = 1;
 while (i <= b)
 {
@@ -21,7 +22,7 @@ printf("Fizz ");
 }
 else if (i % 5 == 0)
 {
-if (i < p)
+if (i < b)
 printf("Buzz ");
 else
 printf("Buzz");
