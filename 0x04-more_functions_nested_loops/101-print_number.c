@@ -2,8 +2,9 @@
 #include <stdio.h>
 /**
  * print_number - prints integer
- *@n: print value
- *Return: Always 0
+ * @n: integer print
+ *
+ * Return: Always 0
  */
 void print_number(int n)
 {
