@@ -4,12 +4,12 @@
  * @str: a pointer to an int
  * Return: Always 0
  */
-void puts(char *str)
+void puts2(char *str)
 {
 int a;
 for (a = 0; str[a] != '/0'; a++)
 {
-if (a % 2 == 0
+if (a % 2 == 0)
 {
 _putchar (str[a]);
 }
