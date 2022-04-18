@@ -8,12 +8,12 @@ void rev_string(char *s)
 {
 char *star_c, end_c, c;
 int i, count;
-int len = 0;
+int lenth = 0;
 for (i = 0; s[i]; i++)
 {
-len++;
+length++;
 }
-count + len;
+count = length;
 star_c = s;
 end_c = s;
 for (i = 0; i < count -1; i++)
