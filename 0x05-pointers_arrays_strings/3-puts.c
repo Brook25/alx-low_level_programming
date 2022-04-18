@@ -1,17 +1,17 @@
 #include "main.h"
 /**
- * print_rev - prints a string
+ * _puts - prints a string
  * @str: a pointer to a string
  * Return: Always 0
  */
-void print_rev(char *s)
+void _puts(char *str)
 {
+char *j;
 int i;
-int j;
-s[i] = '\0';
-for (j < i; j--)
+j = str
+for (i = 0; j[i]; i++)
 {
-_putchar (c[j]);
+_putchar (j[i]);
 }
 _putchar ('\n');
 }
