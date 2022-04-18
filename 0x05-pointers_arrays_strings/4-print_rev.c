@@ -1,17 +1,20 @@
 #include "main.h"
 /**
  * print_rev - prints a string
- * @str: a pointer to a string
+ * @s: a pointer to a string
  * Return: Always 0
  */
 void print_rev(char *s)
 {
 int i;
-int j;
-s[i] = '\0';
-for (j < i; s(j); j--)
+i = 0;
+while (s[i] != '\0')
 {
-_putchar (c[j]);
+i++;
+}
+for (i = i - 1; i >= 0 i; i--)
+{
+_putchar (s[i]);
 }
 _putchar ('\n');
 }
