@@ -14,7 +14,7 @@ for (i = 0; s[i]; i++)
 length++;
 }
 count = length;
-star_c = s;
+start_c = s;
 end_c = s;
 for (i = 0; i < count -1; i++)
 {
