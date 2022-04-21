@@ -20,5 +20,5 @@ while (i < n)
 desti[i] = '\0';
 i++;
 }
-return (dest)
+return (dest);
 }
