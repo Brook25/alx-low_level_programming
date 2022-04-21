@@ -18,7 +18,7 @@ return (0);
 ln1--;
 ln2--;
 size_r--;
-for (i = 0; i < size_r; i++, len--, len2--)
+for (i = 0; i < size_r; i++, ln1--, ln2--)
 {
 if (ln1 >= 0)
 add += n1[ln1] - '0';
