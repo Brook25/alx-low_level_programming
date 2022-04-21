@@ -7,12 +7,12 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-char *string_one = s1;
-char *string_two = s2;
-while (*string_one != '\0' && *string_two != '\0' && *string_one == *string_two)
+char *st_one = s1;
+char *st_two = s2;
+while (*st_one != '\0' && *st_two != '\0' && *st_one == *st_two)
 {
-string_one++;
-string_two++;
+st_one++;
+st_two++;
 }
-return (*string_one - *string_two);
+return (*st_one - *st_two);
 }
