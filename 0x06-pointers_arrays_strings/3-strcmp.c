@@ -14,5 +14,5 @@ while (*str_one != '\0' && *str_one == *str_two)
 str_one++;
 str_two++;
 }
-return (*str_one - *str_two)
+return (*str_one - *str_two);
 }
