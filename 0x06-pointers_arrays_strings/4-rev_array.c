@@ -8,20 +8,20 @@
 
 void reverse_array(int *a, int n)
 {
-int *start_c, *end_c, c;
-int i;
+int *start_c, *end_c, k;
+int j;
 start_c = a;
 end_c = a;
-for (i = 0; i < n - 1; i++)
+for (j = 0; j < n - 1; j++)
 {
 end_c++;
 }
 
-for (i = 0; i < n / 2; i++)
+for (j = 0; j < n / 2; j++)
 {
-c = *end_c;
+k = *end_c;
 *end_c = *start_c;
-*start_c = c;
+*start_c = k;
 
 start_c++;
 end_c--;
