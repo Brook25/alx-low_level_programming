@@ -11,8 +11,10 @@
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 int add = 0, i, j, ln1, ln2;
-for (ln1 = 0; n1[ln1]; ln1++);
-for (ln2 = 0; n2[ln2]; ln2++);
+for (ln1 = 0; n1[ln1]; ln1++)
+;
+for (ln2 = 0; n2[ln2]; ln2++)
+;
 if (ln1 > size_r || ln2 > size_r)
 return (0);
 ln1--;
