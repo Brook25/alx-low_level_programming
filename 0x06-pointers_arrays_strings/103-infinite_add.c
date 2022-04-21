@@ -29,7 +29,7 @@ break;
 r[i] = add % 10 + '0';
 add /= 10;
 }
-r[i] = '\0'
+r[i] = '\0';
 if (ln1 >= 0 || ln2 >= 0 || add) 
 return (0);
 for (i--, j = 0; i > j; i--, j++)
