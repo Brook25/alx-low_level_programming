@@ -17,7 +17,7 @@ i++;
 }
 while (i < n)
 {
-desti[i] = '\0';
+dest[i] = '\0';
 i++;
 }
 return (dest);
