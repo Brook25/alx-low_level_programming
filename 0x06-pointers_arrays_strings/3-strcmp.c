@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _strcmp - compares two strings
+ *_strcmp - compares two strings
  * @s1: A pointer to a character to be changed
  * @s2: A pointer to char to be changed
  * Return: A pointer to a char
  */
-int _strcmp(char *s1,char *s2)
+int _strcmp(char *s1, char *s2)
 {
 char *str_one = s1;
 char *str_two = s2;
