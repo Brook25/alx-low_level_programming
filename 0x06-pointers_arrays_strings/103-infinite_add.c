@@ -10,44 +10,34 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int k1 = 0, k2 = 0, o, b, d1, d2, add = 0;
-while (*(n1 + k1) != '\0')
-k1++;
-while (*(n2 + k2) != '\0')
-k2++;
-if (k1 >= k2)
-b = k1;
-else
-b = k2;
-if (size_r <= b + 1)
+int add = 0, i, j, ln1, ln2;
+for (ln1 = 0; n1[ln1]; ln1++);
+for (ln2 = 0; n2[ln2]; ln2++);
+if (ln1 > size_r || ln2 > size_r)
 return (0);
-r[b + 1] = '\0';
-k1--, k2--, size_r--;
-d1 = *(n1 + k1) - 48, d2 = *(n2 + k2) - 48;
-while (b >= 0)
+ln1--;
+ln2--;
+size_r--;
+for (i = 0; i < size_r; i++, len--, len2--)
 {
-o = d1 + d2 + add;
-if (o >= 10)
-add = o / 10;
-else
-add = 0;
-if (o > 0)
-*(r + b) = (o % 10) + 48;
-else
-*(r + b) = '0';
-if (k1 > 0)
-k1--, d1 = *(n1 + k1) -48;
-else
-d1 = 0;
-if (k2 > 0)
-k2--, d2 = *(n2 + k2) - 48;
-else
-d2 = 0;
-b--, size_r--;
+if (ln1 >= 0)
+add += n1[ln1] - '0';
+if (ln2 >= 0)
+add += n2[ln2] - '0';
+if (ln1 < 0 && ln2 < 0 && add == 0)
+break;
+r[i] = add % 10 + '0';
+add /= 10;
 }
-if (*(r) == '0')
-return (r + 1);
-else
+r[i] = '\0'
+if (ln1 >= 0 || ln2 >= 0 || add) 
+return (0);
+for (i--, j = 0; i > j; i--, j++)
+{
+add = r[i];
+r[i] = r[j];
+r[j] = add;
+}
 return (r);
 }
 
