@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * infinite_add - adds two numbers
- * @n1: First number.
- * @n2: second number.
- * @r: the buffer to store the result.
- * @size_r: size of buffer:
- * Return: pointer to dest.
+ *infinite_add - adds two numbers
+ *@n1: First number.
+ *@n2: second number.
+ *@r: the buffer to store the result.
+ *@size_r: size of buffer:
+ *Return: pointer to dest.
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
