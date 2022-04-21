@@ -16,13 +16,13 @@ k1++;
 while (*(n2 + k2) != '\0')
 k2++;
 if (k1 >= k2)
-bg = k1;
+b = k1;
 else
-bg = k2;
+b = k2;
 if (size_r <= b + 1)
 return (0);
-r[bg + 1] = '\0';
-c1--, c2--, size_r--;
+r[b + 1] = '\0';
+k1--, k2--, size_r--;
 d1 = *(n1 + k1) - 48, d2 = *(n2 + k2) - 48;
 while (b >= 0)
 {
@@ -42,7 +42,7 @@ d1 = 0;
 if (k2 > 0)
 k2--, d2 = *(n2 + k2) - 48;
 else
-d1 = 0;
+d2 = 0;
 b--, size_r--;
 }
 if (*(r) == '0')
