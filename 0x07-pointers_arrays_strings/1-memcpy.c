@@ -13,5 +13,5 @@ for (i = 0; i < n; i++)
 {
 *(dest+i) += *(src+i);
 }
-return (src);
+return (dest);
 }
