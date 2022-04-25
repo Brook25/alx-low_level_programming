@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strbrk - matches a character
+ * _strpbrk - matches a character
  * @s: The string to be checked
  * @accept: character specified
  * Return: string
