@@ -7,6 +7,7 @@
  * Return: void
  */
 void print_diagsums(int *a, int size)
+{
 int b;
 int tot1, tot2;
 tot1 = 0;
