@@ -12,11 +12,11 @@ int tot1, tot2;
 tot1 = 0;
 tot2 = 0;
 b = 0;
-while (i < size)
+while (b < size)
 {
 tot1 = tot1 + *(a + b * size + i);
 tot2 = tot2 + *(a + b * size + size - i - 1);
 a++;
 }
-printf("%a, %a\n", tot1, tot2);
+printf("%b, %b\n", tot1, tot2);
 }
