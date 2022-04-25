@@ -5,7 +5,7 @@
  * @accept: character specified
  * Return: string
  */
-char *_strbrk(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 int i;
 while (*s != '\0')
