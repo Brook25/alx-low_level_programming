@@ -9,13 +9,15 @@ unisgned int _strspn(char *s, char *accept)
 {
 int a, b;
 int count = 0;
+st1 = s;
+st2 = accept;
 a = 0;
-while (s[a] != '\0')
+while (st1[a] != '\0')
 {
 b = 0;
-while (accept[b] != '\0')
+while (st2[b] != '\0')
 {
-if (accept[b] == s[a])
+if (st2[b] == st1[a])
 {
 count++;
 break;
