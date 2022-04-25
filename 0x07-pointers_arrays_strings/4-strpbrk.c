@@ -12,6 +12,7 @@ while (*s != '\0')
 {
 i = 0;
 while (accept[i] != '\0')
+{
 if (*s == accept[i])
 {
 return (s);
