@@ -22,7 +22,7 @@ void print_diagsums(int *a, int size)
 		b = b + size + 1;
 	}
 	b = size - 1;
-	while (i < ((size * size) - 1))
+	while (b < ((size * size) - 1))
 	{
 		val = *(a + b);
 		sum2 = sum2 + val;
