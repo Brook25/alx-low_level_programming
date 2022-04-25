@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
  * print_diagsums - does the sum of two diagonals of a square matrix
  * @a: array of characs
@@ -8,10 +9,13 @@
  */
 void print_diagsums(int *a, int size)
 {
+
 int b;
 int tot1, tot2;
+
 tot1 = 0;
 tot2 = 0;
+
 b = 0;
 while (b < size)
 {
