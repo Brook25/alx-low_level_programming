@@ -16,7 +16,7 @@ while (b < size)
 {
 tot1 = tot1 + *(a + b * size + b);
 tot2 = tot2 + *(a + b * size + size - b - 1);
-a++;
+b++;
 }
 printf("%b, %b\n", tot1, tot2);
 }
