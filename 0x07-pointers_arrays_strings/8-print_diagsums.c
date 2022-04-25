@@ -9,24 +9,16 @@
  */
 void print_diagsums(int *a, int size)
 {
-
 int b;
-int total1, total2;
-
-total1 = 0;
-total2 = 0;
-
+int tot1, tot2;
+tot1 = 0;
+tot2 = 0;
 b = 0;
 while (b < size)
 {
-
-total1 = total1 + *(a + b * size + b);
-total2 = total2 + *(a + b * size + size - b - 1);
-
+tot1 = tot1 + *(a + b * size + b);
+tot2 = tot2 + *(a + b * size + size - b - 1);
 b++;
-
 }
-
-printf("%d, %d\n", total1, total2);
-
+printf("%i, %i\n", tot1, tot2);
 }
