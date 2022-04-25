@@ -1,13 +1,14 @@
 #include "main.h"
 /**
  * _strstr - first occurence of substring
- * @haystack: main str to be checked
+ * @haystack: str to be checked
  * @needle: substring in the haystack
  * Return: 0
  */
 char  *_strstr(char *haystack, char *needle)
 {
-char *s, char *i;
+
+char *s, *i;
 while (*haystack != '\0')
 {
 s = haystack;
@@ -17,7 +18,7 @@ while (*haystack != '\0' && *i != '\0' && *haystack == *i)
 haystack++;
 i++;
 }
-if (i == '\0')
+if (*i == '\0')
 return (s);
 haystack = s + 1;
 }
