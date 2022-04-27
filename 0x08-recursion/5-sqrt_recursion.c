@@ -6,7 +6,7 @@
  * @x: number input
  * Return: int
  */
-int sqrNum(int x, int i);
+int sqrNum(int x);
 
 int _sqrt_recursion(int n)
 {
@@ -24,8 +24,9 @@ return (sqrNum(n, 1));
  * @i: variable
  * Return: int
  */
-int sqrNum(int x, int i)
+int sqrNum(int x)
 {
+int i;
 if (x == (i * i))
 return (i);
 else if (x > (i * i))
