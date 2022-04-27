@@ -4,28 +4,22 @@
  * @n: number input
  * Return: int
  */
-int PrimNum(int num, int i);
-
 int is_prime_number(int n)
 {
 if (n <= 1)
 return (0);
-return (PrimNum(n, 2));
+return (primNum(n, 2));
 }
-
 /**
- * PrimNum - function that gets if num is 0 or 1
- *
- * @num: input number
- * @i: Counter variable
+ * primNum - function gets if number is 0 or 1
+ * @num: number input
  * Return: int
  */
-
-int PrimNum(int num, int i)
+int primNum(int num, int i)
 {
 if (num == i)
-		return (1);
+return (1);
 if (num % i == 0)
-		return (0);
-return (PrimNum(num, i + 1));
+return (0);
+return (primNum(num, i + 1));
 }
