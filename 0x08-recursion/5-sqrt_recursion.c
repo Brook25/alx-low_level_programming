@@ -18,8 +18,6 @@ return (-1);
 /**
  * _sqrt_recursion - function returns square root of a number
  * @n: number
- * @i: variable
- * @x: number input
  * Return: int
  */
 
