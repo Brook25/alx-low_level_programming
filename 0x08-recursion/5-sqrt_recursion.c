@@ -1,24 +1,5 @@
 #include "main.h"
 /**
- * _sqrt_recursion - function returns square root of a number
- * @n: number input
- * @i: variable
- * @x: number input
- * Return: int
- */
-int sqrNum(int x, int i);
-
-int _sqrt_recursion(int n)
-{
-if (n == 0)
-return (0);
-if (n == 1)
-return (1);
-if (n < 0)
-return (-1);
-return (sqrNum(n, 1));
-}
-/**
  * sqrNum - function does the sqr root of a number
  * @x: number input
  * @i: variable
@@ -32,4 +13,23 @@ else if (x > (i * i))
 return (sqrNum(x, i + 1));
 else
 return (-1);
+}
+
+/**
+ * _sqrt_recursion - function returns square root of a number
+ * @n: number
+ * @i: variable
+ * @x: number input
+ * Return: int
+ */
+
+int _sqrt_recursion(int n)
+{
+if (n == 0)
+return (0);
+if (n == 1)
+return (1);
+if (n < 0)
+return (-1);
+return (sqrNum(n, 1));
 }
