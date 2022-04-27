@@ -27,5 +27,5 @@ return (i);
 else if (num > (i * i))
 return (sqrnum(num, i + 1));
 else
-return (-1
+return (-1);
 }
