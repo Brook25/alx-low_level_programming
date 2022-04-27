@@ -22,7 +22,7 @@ int scan_pal(char *s, int len)
 if (*s != *(s + len -1))
 return (0);
 else if (*s == '\0')
-return (1)
+return (1);
 return (scan_pal(s + 1, len - 2));
 }
 /**
