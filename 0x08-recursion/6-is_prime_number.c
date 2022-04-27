@@ -8,22 +8,22 @@ int is_prime_number(int n)
 {
 if (n <= 1)
 return (0);
-return (getNumPrim(n, 2));
+return (PrimNum(n, 2));
 }
 
 /**
- * getNumPrim - function that gets if num is 0 or 1
+ * PrimNum - function that gets if num is 0 or 1
  *
  * @num: input number
  * @i: Counter variable
  * Return: int
  */
 
-int getNumPrim(int num, int i)
+int PrimNum(int num, int i)
 {
 if (num == i)
 		return (1);
 if (num % i == 0)
 		return (0);
-return (getNumPrim(num, i + 1));
+return (PrimNum(num, i + 1));
 }
