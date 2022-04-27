@@ -2,6 +2,8 @@
 /**
  * _sqrt_recursion - function returns square root of a number
  * @n: number input
+ * @i: variable
+ * @num: number input 
  * Return: int
  */
 int sqrnum(int num, int i);
@@ -19,7 +21,7 @@ return (sqrnum(n, 1));
 /**
  * sqrnum - function does the sqr root of a number
  * @num: number input
- * @i; variable
+ * @i: variable
  * Return: int
  */
 int sqrnum(int num, int i)
