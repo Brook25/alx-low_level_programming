@@ -4,10 +4,10 @@
  * is_prime_number - returns 1 if the input integer is a prime number
  * otherwise return 0
  * @n: input number
- *
+ * @num: number input
+ * @i: variable to count
  * Return: int
  */
-int PrimNum(int num, int i);
 int is_prime_number(int n)
 {
 	if (n <= 1)
