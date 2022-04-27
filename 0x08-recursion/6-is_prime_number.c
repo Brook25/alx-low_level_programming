@@ -17,9 +17,6 @@ int is_prime_number(int n)
 
 /**
  * PrimNum - function that gets if num is 0 or 1
- *
- * @num: input number
- * @i: Counter variable
  * Return: int
  */
 
