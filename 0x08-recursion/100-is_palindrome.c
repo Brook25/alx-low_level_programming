@@ -26,11 +26,11 @@ return (1);
 return (scan_pal(s + 1, len - 2));
 }
 /**
- * is_pal - returns 1 if a string is palindorme and 0 if not.
+ * is_palindrome - returns 1 if a string is palindorme and 0 if not.
  * @s: input char
  * Return: int
  */
-int is_pal(char *s)
+int is_palindrome(char *s)
 {
 int len;
 len = _strlen_recursion(s);
