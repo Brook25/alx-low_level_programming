@@ -19,7 +19,7 @@ return (1 + _strlen_recursion(s));
  */
 int scan_pal(char *s, int len)
 {
-if (*s != *(s + len -1))
+if (*s != *(s + len - 1))
 return (0);
 else if (*s == '\0')
 return (1);
