@@ -4,6 +4,8 @@
  * @n: number input
  * Return: int
  */
+int sqrnum(int num, int i);
+
 int _sqrt_recursion(int n)
 {
 if (n == 0)
