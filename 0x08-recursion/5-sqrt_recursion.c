@@ -3,10 +3,10 @@
  * _sqrt_recursion - function returns square root of a number
  * @n: number input
  * @i: variable
- * @num: number input
+ * @dig: number input
  * Return: int
  */
-int sqrnum(int num, int i);
+int sqrnum(int dig, int i);
 
 int _sqrt_recursion(int n)
 {
@@ -20,15 +20,16 @@ return (sqrnum(n, 1));
 }
 /**
  * sqrnum - function does the sqr root of a number
+ * @dig: number input
  * @i: variable
  * Return: int
  */
-int sqrnum(int num, int i)
+int sqrnum(int dig, int i)
 {
-if (num == (i * i))
+if (dig == (i * i))
 return (i);
-else if (num > (i * i))
-return (sqrnum(num, i + 1));
+else if (dig > (i * i))
+return (sqrnum(dig, i + 1));
 else
 return (-1);
 }
