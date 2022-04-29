@@ -23,7 +23,7 @@ int check_digit(char *a)
 		}
 		else
 			num = num * 10 + (a[b] - '0');
-		i++;
+		b++;
 	}
 	return (num);
 }
