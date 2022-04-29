@@ -1,11 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
+
 /**
  * main - program that prints all arguments it is given
  * @argc: argument count
- * @argv: argument vector
+ * @argv: argunment vector
+ *
  * Return: int
  */
+
 int main(int argc, char *argv[])
 {
 int count, num1, num2, res;
