@@ -16,13 +16,13 @@ if (argc != 2)
 printf("Error\n");
 return (1);
 }
-total = atoi(argv[1]);
+tot = atoi(argv[1]);
 if (tot <= 0)
 {
 printf("0\n");
 return (0);
 }
-while (coin[pos] != 0)
+while (coin[pos] != '\0')
 {
 if (tot >= coin[pos])
 {
