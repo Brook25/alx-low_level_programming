@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 int pos, tot, change, aux;
-int coin[] = {25, 10, 5, 2, 1}
+int coin[] = {25, 10, 5, 2, 1};
 pos = tot = change = aux = 0;
 if (argc != 2)
 {
@@ -24,7 +24,7 @@ return (0);
 }
 while (coin[pos] != 0)
 {
-if (tot >= coin[pos]);
+if (tot >= coin[pos])
 {
 aux = (tot / coin[pos]);
 change += aux;
