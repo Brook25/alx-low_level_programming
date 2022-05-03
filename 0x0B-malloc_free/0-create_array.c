@@ -17,7 +17,7 @@ if (ch == NULL)
 return (NULL);
 while (i < size)
 {
-ar[i] = c;
+ch[i] = c;
 i += 1;
 }
 return (ch);
