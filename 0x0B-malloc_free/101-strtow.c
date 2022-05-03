@@ -1,112 +1,65 @@
 #include <stdlib.h>
 #include "main.h"
 /**
+ * ar_free_grid - frees a memory of 2-D array
+ * @grid: multi-D array of char
+ * @height: height of array
+ * Return: void
+ */
+
+
+void ar_free_grid(char **grid, unsigned int height)
+{
+	if (grid != NULL && height != 0)
+	{
+		for (; height > 0; height--)
+			free(grid[height]);
+		free(grid[height]);
+		free(grid);
+	}
+}
+/**
  * strtow - splits a string into words
  * @str: string
  * Return: pointer to an array
  */
-int contWords(char *s);
-int endInd(char *s, int index);
-int startInd(char *s, int index);
-int isSpace(char c);
-
 char **strtow(char *str)
 {
-	char **ptr;
-	int i, l, len, start, end, j = 0;
-	int words = contWords(str);
+	char **out;
+	unsigned int c, height, i, j, a1;
 
-	if (!str || !contWords(str))
+	if (str == NULL || *str == '\0')
 		return (NULL);
-	ptr = malloc(sizeof(char *) * (words + 1));
-	if (!ptr)
-		return (NULL);
-	for (i = 0; i < words; i++)
+	for (c = height = 0; str[c] != '\0'; c++)
+		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
+			height++;
+	out = malloc((height + 1) * sizeof(char *));
+	if (out == NULL || height == 0)
 	{
-		start = startInd(str, j);
-		end = endInd(str, start);
-		len = end - start;
-		ptr[i] = malloc(sizeof(char) * (len + 1));
-		if (!ptr[i])
+		free(out);
+		return (NULL);
+	}
+	for (i = a1 = 0; i < height; i++)
+	{
+		for (c = a1; str[c] != '\0'; c++)
 		{
-			i -= 1;
-			while (i >= 0)
+			if (str[c] == ' ')
+				a1++;
+			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			{
-				free(ptr[i]);
-					i--;
+				out[i] = malloc((c - a1 + 2) * sizeof(char));
+				if (out[i] == NULL)
+				{
+					ch_free_grid(out, i);
+					return (NULL);
+				}
+				break;
 			}
-			free(ptr);
-			return (NULL);
 		}
-		for (l = 0; l < len; l++)
-			ptr[i][l] = str[start++];
-		ptr[i][l++] = '\0';
-		j = end + 1;
+		for (j = 0; a1 <= c; a1++, j++)
+			out[i][j] = str[a1];
+		out[i][j] = '\0';
 	}
-	ptr[i] = NULL;
-	return (ptr);
-}
-/**
- * isSpace - checks if char is space or not
- * @c: char input
- * Return: 1 if true or 0 if not
- */
-
-int isSpace(char c)
-{
-	return (c == ' ');
-}
-/**
- * startInd - returns the first entry of non-space char
- * @s: string input
- * @index: index
- * Return: entry of first non-space character
- */
-
-
-int startInd(char *s, int index)
-{
-
-	while (isSpace(*(s + index)))
-		index++;
-	return (index);
-}
-
-/**
- * endInd - returns last entry of non-space character
- * @s: string input
- * @index: 1st entry
- * Return: entry of last non-space character
- */
-
-int endInd(char *s, int index)
-{
-	while (!isSpace(*(s + index)))
-		index++;
-	return (index);
-}
-/**
- * contwords - counts numbers of words in strings
- * @s: string input
- * Return: total number of words
- */
-
-
-int contWords(char *s)
-{
-	int wordOn = 0;
-	int words = 0;
-
-	while (*s)
-	{
-		if (isSpace(*s) && wordOn)
-			wordOn = 0;
-		else if (!isSpace(*s) && !wordOn)
-		{
-			wordOn = 1;
-			words++;
-		}
-		s++;
-	}
-	return (words);
+	out[i] = NULL;
+	return (out);
 }
