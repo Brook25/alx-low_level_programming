@@ -50,7 +50,7 @@ char **strtow(char *str)
 				out[i] = malloc((c - a1 + 2) * sizeof(char));
 				if (out[i] == NULL)
 				{
-					ch_free_grid(out, i);
+					ar_free_grid(out, i);
 					return (NULL);
 				}
 				break;
