@@ -1,14 +1,20 @@
 #include <stdlib.h>
+#include "main.h"
 /**
  * strtow - splits a string into words
  * @str: string
  * Return: pointer to an array
  */
+int contWords(char *s);
+int endInd(char *s, int index);
+int startInd(char *s, int index);
+int isSpace(char c);
+
 char **strtow(char *str)
 {
 	char **ptr;
 	int i, l, len, start, end, j = 0;
-	int words =  contWords(str);
+	int words = contWords(str);
 
 	if (!str || !contWords(str))
 		return (NULL);
