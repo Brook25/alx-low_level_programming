@@ -24,7 +24,7 @@ j += 1;
 ch = malloc(sizeof(char) * (i + j));
 if (ch == NULL)
 return (NULL);
-while (sl[k] != '\0')
+while (s1[k] != '\0')
 {
 ch[k] = s1[k];
 x += 1;
