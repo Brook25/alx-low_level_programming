@@ -27,7 +27,7 @@ return (NULL);
 while (s1[k] != '\0')
 {
 ch[k] = s1[k];
-x += 1;
+k += 1;
 }
 
 while (s2[l] != '\0')
