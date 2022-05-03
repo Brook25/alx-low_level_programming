@@ -12,7 +12,7 @@ int i, j, k, l;
 i = j = k = l = 0;
 if (width <= 0 || height <= 0)
 return (NULL);
-ch = malloc(height * size of(int *));
+ch = malloc(height * sizeof(int *));
 if (ch == NULL)
 return (NULL);
 for (i = 0; i < height; i++)
@@ -28,7 +28,7 @@ return (NULL);
 }
 for(j = 0; j < height; j++)
 {
-for (k = 0; k < weight; k++)
+for (k = 0; k < width; k++)
 ch[j][k] = 0;
 }
 return (ch);
