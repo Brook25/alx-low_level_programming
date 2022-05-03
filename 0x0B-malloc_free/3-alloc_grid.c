@@ -1,8 +1,8 @@
 #include <stdlib.h>
 /**
  * alloc_grid - returns a pointer to a 2 dimensional array of integers
- * @width - array
- * @height - array
+ * @width: array
+ * @height: array
  * Return: pointer
  */
 int **alloc_grid(int width, int height)
@@ -26,7 +26,7 @@ free(ch);
 return (NULL);
 }
 }
-for(j = 0; j < height; j++)
+for (j = 0; j < height; j++)
 {
 for (k = 0; k < width; k++)
 ch[j][k] = 0;
