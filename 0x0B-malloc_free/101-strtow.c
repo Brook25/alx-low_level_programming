@@ -8,17 +8,17 @@ char **strtow(char *str)
 {
 	char **ptr;
 	int i, l, len, start, end, j = 0;
-	int words =  countWords(str);
+	int words =  contWords(str);
 
-	if (!str || !countWords(str))
+	if (!str || !contWords(str))
 		return (NULL);
 	ptr = malloc(sizeof(char *) * (words + 1));
 	if (!ptr)
 		return (NULL);
 	for (i = 0; i < words; i++)
 	{
-		start = startIndex(str, j);
-		end = endIndex(str, start);
+		start = startInd(str, j);
+		end = endInd(str, start);
 		len = end - start;
 		ptr[i] = malloc(sizeof(char) * (len + 1));
 		if (!ptr[i])
@@ -51,14 +51,14 @@ int isSpace(char c)
 	return (c == ' ');
 }
 /**
- * startIndex - returns the first entry of non-space char
+ * startInd - returns the first entry of non-space char
  * @s: string input
  * @index: index
  * Return: entry of first non-space character
  */
 
 
-int startIndex(char *s, int index)
+int startInd(char *s, int index)
 {
 
 	while (isSpace(*(s + index)))
@@ -67,26 +67,26 @@ int startIndex(char *s, int index)
 }
 
 /**
- * endIndex - returns last entry of non-space character
+ * endInd - returns last entry of non-space character
  * @s: string input
  * @index: 1st entry
  * Return: entry of last non-space character
  */
 
-int endIndex(char *s, int index)
+int endInd(char *s, int index)
 {
 	while (!isSpace(*(s + index)))
 		index++;
 	return (index);
 }
 /**
- * countwords - counts numbers of words in strings
+ * contwords - counts numbers of words in strings
  * @s: string input
  * Return: total number of words
  */
 
 
-int countWords(char *s)
+int contWords(char *s)
 {
 	int wordOn = 0;
 	int words = 0;
