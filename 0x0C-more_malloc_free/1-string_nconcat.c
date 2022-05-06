@@ -17,28 +17,35 @@ if (s2 == NULL)
 
 s2 = "";
 
+tot1 = 0;
 while (s1[tot1] != '\0')
 {
 tot1++;
 }
 
+tot2 = 0;
 while (s2[tot2] != '\0')
 {
 tot2++;
 }
+
 if (n > tot2)
 n = tot2;
 s = malloc((tot1 + n + 1) * sizeof(char));
+
 if (s == NULL)
 return (0);
+
 for (k = 0; k < tot1; k++)
 {
 s[k] = s1[k];
 }
+
 for (; k < (tot1 + n); k++)
 {
 s[k] = s2[k - tot1];
 }
 s[i] = '\0';
+
 return (s);
 }
