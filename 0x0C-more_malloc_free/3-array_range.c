@@ -1,4 +1,7 @@
 #include <stdlib.h>
+#include <limits.h>
+#include <stdio.h>
+#include "main.h"
 /**
  * array_range - creates an array of int
  * @min: minimum integer
@@ -7,7 +10,7 @@
  */
 int *array_range(int min, int max)
 {
-int *num, k = 0;
+int *num, k = 0, l = min;
 
 if (min > max)
 return (0);
@@ -18,6 +21,6 @@ if (!num)
 return (0);
 
 while (k <= max - min)
-num[k++] = min++;
+num[k++] = l++;
 return (num);
 }
