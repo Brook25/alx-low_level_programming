@@ -10,17 +10,17 @@
  */
 int *array_range(int min, int max)
 {
-int *num, k = 0;
+int *num, k = 0, l = min;
 
 if (min > max)
 return (0);
 
 num = malloc((max - min + 1) * sizeof(int));
 
-if (!num)
+if (num == NULL)
 return (0);
 
 while (k <= max - min)
-num[k++] = min++;
+num[k++] = l++;
 return (num);
 }
