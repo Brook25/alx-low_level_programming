@@ -10,11 +10,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 char *s;
 unsigned int tot1, tot2, k;
+
 if (s1 == NULL)
 s1 = "";
 
 if (s2 == NULL)
-
 s2 = "";
 
 tot1 = 0;
@@ -45,7 +45,7 @@ for (; k < (tot1 + n); k++)
 {
 s[k] = s2[k - tot1];
 }
-s[i] = '\0';
+s[k] = '\0';
 
 return (s);
 }
