@@ -17,11 +17,11 @@ exit(98);
 }
 for (a = 1; a < argc; a++)
 {
-for (b=0; argv[a][b] != '\0'; b++)
+for (b = 0; argv[a][b] != '\0'; b++)
 {
 if (argv[a][b] > 57 || argv[a][b] < 48)
 {
-printf("Error\m");
+printf("Error\n");
 exit(98);
 }
 }
