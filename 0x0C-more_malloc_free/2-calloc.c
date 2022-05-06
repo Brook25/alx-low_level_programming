@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdlib.h>
 /**
  * _calloc - alloctes memory for an array
  * @nmemb: nth member
