@@ -13,7 +13,7 @@ unsigned int a = 0;
 unsigned int b = 0;
 if (str == NULL)
 return (NULL);
-while (str[a] !=  '\0')
+while (str[a] != '\0')
 a += 1;
 a += 1;
 s = malloc(a * sizeof(char));
