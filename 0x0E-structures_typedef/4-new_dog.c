@@ -19,13 +19,14 @@ a += 1;
 s = malloc(a * sizeof(char));
 if (s == NULL)
 return (NULL);
-while (b < a);
+while (b < a)
 {
 s[b] = str[b];
 b += 1;
 }
 return (s);
 }
+
 /**
  * new_dog - function creates new dog
  * @name: name of dog
