@@ -24,9 +24,9 @@ int (*get_op_func(char *s))(int, int)
 	a = 0;
 	while (a < 5)
 	{
-		if (*s == *(ops[i]).op)
+		if (*s == *(ops[a]).op)
 		{
-			return (*(ops[i]).f);
+			return (*(ops[a]).f);
 		}
 		a++;
 	}
