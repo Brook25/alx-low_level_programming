@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "function_pointers.h"
 /**
- * array_iterator - function that recieves function pointer as parameter
+ * array_iterator - function that recieves function pointer as parameter.
  *@array: array input
  *@size: size of the array
  *@action: is a pointer to a certain function
