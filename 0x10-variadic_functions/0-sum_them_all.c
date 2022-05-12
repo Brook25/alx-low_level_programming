@@ -13,7 +13,7 @@ unsigned int a;
 if (n == 0)
 return (0);
 sum = 0;
-va_start(numbers, n);
+va_start(num, n);
 for (a = 0; a < n; a++)
 sum += va_arg(num, int);
 va_end(num);
