@@ -1,12 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "variadic_funcions.h"
+#include "variadic_functions.h"
 /**
  * print_i - function prints integer
  * @list: list of arguments
  * @s: separator
  * Return: nothing
  */
+void print_i(va_list list, char *s)
+{
+printf("%s%d", s, va_arg(list, int));
+}
+/**
+ * print_c - prints character
+ * @list: argument character
+ * @sep: separator
+ */
+void print_c(va_list list, char *sep)
+{
+printf("%s%c", sep, va_arg(list, int));
+}
+
+/**
+ * print_s - function prints string
+ * @sep: separator
+ * @list: list to print
+ * Return: none
+ */
+
 void print_s(va_list list, char *sep)
 {
 char *s;
@@ -15,6 +36,7 @@ if (s == NULL)
 s = "(nil)";
 printf("%s%s", sep, s);
 }
+
 /**
  * print_f - function prints floats
  * @sep: float value to be printed
