@@ -15,6 +15,7 @@ printf("%s%d", s, va_arg(list, int));
  * print_c - prints character
  * @list: argument character
  * @sep: separator
+ * Return: nothing
  */
 void print_c(va_list list, char *sep)
 {
@@ -72,6 +73,7 @@ while (format != NULL && format[a] != '\0')
 {
 b = 0;
 while (b < 4)
+{
 if (format[a] == *(ops[b]).op)
 {
 ops[b].f(list, separator);
