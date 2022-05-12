@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 /**
- * sum_them_all - function returns sum of all of its parameters
+ * sum_them_all - function returns sum of all of its parameters.
  * @n: number of parameters
  * Return: sum of all parameters
  */
@@ -17,5 +17,5 @@ va_start(num, n);
 for (a = 0; a < n; a++)
 sum += va_arg(num, int);
 va_end(num);
-return(sum);
+return (sum);
 }
