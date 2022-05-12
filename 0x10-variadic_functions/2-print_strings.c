@@ -14,7 +14,7 @@ char *b;
 va_start(args, n);
 for (a = 0; a < n; a++)
 {
-b = va_arg(args, char*)
+b = va_arg(args, char*);
 if (b == NULL)
 printf("(nil)");
 else
