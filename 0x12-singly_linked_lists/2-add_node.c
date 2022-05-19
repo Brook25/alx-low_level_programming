@@ -5,8 +5,8 @@
 
 /**
  * add_node - function that prints all the elements of a list_t list
- * @head: input pointer to a header
- * @str: Input string
+ * @head: input header pointer
+ * @str: Input string value
  * Return: address of the new element, or NULL if it failed
  */
 
@@ -25,8 +25,8 @@ list_t *add_node(list_t **head, const char *str)
 }
 
 /**
- * _strlen - returns string length
- * @s: character
+ * _strlen - returns length of string
+ * @s: character of string
  * Return: length of string
  */
 
