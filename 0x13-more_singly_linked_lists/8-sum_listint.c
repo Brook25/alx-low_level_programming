@@ -11,7 +11,7 @@ int add;
 add = 0;
 while (head != NULL)
 {
-sum += head->n;
+add += head->n;
 head = head->next;
 }
 return (add);
