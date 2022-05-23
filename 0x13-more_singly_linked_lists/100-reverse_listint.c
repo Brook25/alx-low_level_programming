@@ -18,6 +18,6 @@ z = (*head)->next;
 a = *head;
 *head = z;
 }
-*head = z;
+*head = a;
 return (*head);
 }
