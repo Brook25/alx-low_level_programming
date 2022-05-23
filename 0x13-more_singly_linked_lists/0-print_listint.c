@@ -12,7 +12,7 @@ while (h != NULL)
 {
 printf("%d\n", h->n);
 h = h->next;
-nodes++
+nodes++;
 }
 return (nodes);
 }
