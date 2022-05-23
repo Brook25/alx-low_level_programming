@@ -12,7 +12,7 @@ listint_t *mem;
 mem = malloc(sizeof(listint_t));
 if (mem == NULL)
 return (NULL);
-mem->n = n
+mem->n = n;
 mem->next = *head;
 *head = mem;
 return (*head);
