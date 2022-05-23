@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_nodeint_add - add new node at the end of linked list
+ * add_nodeint_end - add new node at the end of linked list
  * @head: head of list
  * @n: n elements
  *
@@ -8,18 +8,18 @@
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-listint_t *nnew;
+listint_t *n_ew;
 listint_t *tmp;
 (void)tmp;
-nnew = malloc(sizeof(listint_t));
-if (nnew == NULL)
+n_ew = malloc(sizeof(listint_t));
+if (n_ew == NULL)
 return (NULL);
-nnew->n = n;
-nnew->next = NULL;
+n_ew->n = n;
+n_ew->next = NULL;
 tmp = *head;
 if (*head == NULL)
 {
-*head = nnew;
+*head = n_ew;
 }
 else
 {
@@ -27,7 +27,7 @@ while (tmp->next != NULL)
 {
 tmp = tmp->next;
 }
-tmp->next = nnew;
+tmp->next = n_ew;
 }
 return (*head);
 }
