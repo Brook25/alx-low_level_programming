@@ -15,7 +15,7 @@ while (*head != NULL)
 {
 z = (*head)->next;
 (*head)->next = a;
-a = *head
+a = *head;
 *head = z;
 }
 *head = z;
