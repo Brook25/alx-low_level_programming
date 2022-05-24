@@ -24,13 +24,13 @@ while (1)
 p2 = previous;
 while (p2->next != head && p2->next != previous)
 {
-p2 = p2->next;
+p2 = p2->next
 }
 if (p2->next == head)
 break;
 head = head->next;
 }
-return (p2->next)
+return (p2->next);
 }
 }
 return (NULL);
