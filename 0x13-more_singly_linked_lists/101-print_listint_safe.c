@@ -10,6 +10,7 @@ void free_listp(listp_t **head)
 listp_t *tempo;
 listp_t *curent;
 if (head != NULL)
+{
 curent = *head;
 while ((tempo = curent) != NULL)
 {
