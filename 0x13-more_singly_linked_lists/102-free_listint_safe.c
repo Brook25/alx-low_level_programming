@@ -1,11 +1,11 @@
 #include "lists.h"
 /**
- * free_listp2 - frees linked list
+ * free_listp0 - frees linked list
  * @head: head of list
  *
  * Return: nothing
  */
-void free_listp2(listp_t **head)
+void free_listp0(listp_t **head)
 {
 listp_t *tempo;
 listp_t *curr;
@@ -36,7 +36,7 @@ hptr = NULL;
 while (*h != NULL)
 {
 buff = malloc(sizeof(listp_t));
-if (new == NULL)
+if (buff == NULL)
 exit(98);
 buff->p = (void *)*h;
 buff->next = hptr;
@@ -48,7 +48,7 @@ add = add->next;
 if (*h == add->p)
 {
 *h = NULL;
-free_listp2(&hptr);
+free_listp0(&hptr);
 return (nodes);
 }
 }
@@ -58,6 +58,6 @@ free(curr);
 nodes++;
 }
 *h = NULL;
-free_listp2(&hptr)
+free_listp0(&hptr);
 return (nodes);
 }
