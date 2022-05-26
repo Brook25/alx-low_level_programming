@@ -7,9 +7,9 @@
 int get_enidaness(void)
 {
 unsigned int a;
-char *c;
-	x=1;
-	c=(char *) &x;
+char *ch;
+	a=1;
+	ch = (char *) &a;
 
-	return ((int)*c);
+	return ((int)*ch);
 }
