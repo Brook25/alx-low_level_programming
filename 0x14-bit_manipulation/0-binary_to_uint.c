@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _pow_recursion - function that returns the value of x
+ * _pow_recursion - function returns the value of x
  * raised to the power of y
  * @x: base number
  * @y: pow number
@@ -48,7 +48,7 @@ int _strlen(const char *s)
 unsigned int binary_to_uint(const char *b)
 {
 	int len, exp = 0;
-	unsigned int res = 0
+	unsigned int res = 0;
 
 	if (b == NULL)
 		return (0);
@@ -59,7 +59,7 @@ unsigned int binary_to_uint(const char *b)
 			res += _pow_recursion(2, exp);
 		else if (b[len] != '0')
 			return (0);
-		exp++;
+		exp++
 	}
 	return (res);
 }
