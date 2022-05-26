@@ -5,8 +5,8 @@
 /**
  * _pow_recursion - function returns the value of x
  * raised to the power of y
- * @a: base number
- * @y: pow number
+ * @x: base number
+ * @a: pow number
  * Return: int
  */
 
