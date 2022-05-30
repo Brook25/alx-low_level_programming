@@ -27,7 +27,7 @@ exit(99);
  */
 int main(int argc, char *argv[])
 {
-int file__from, file__to, err_close;
+int file_from, file_to, err_close;
 ssize_t numchars, nwr;
 char buf[1024];
 if (argc != 3)
@@ -35,29 +35,29 @@ if (argc != 3)
 dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 exit(97);
 }
-file__from = open(argv[1], O_RDONLY);
-file__to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-error_file(file__from, file__to, argv);
+file_from = open(argv[1], O_RDONLY);
+file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+error_file(file_from, file_to, argv);
 numchars = 1024;
 while (numchars == 1024)
 {
-numchars = read(file__from, buf, 1024);
+numchars = read(file_from, buf, 1024);
 if (numchars == -1)
 error_file(-1, 0, argv);
-nwr = write(file__to, buf, numchars);
+nwr = write(file_to, buf, numchars);
 if (nwr == -1)
 error_file(0, -1, argv);
 }
-err_close = close(file__from);
+err_close = close(file_from);
 if (err_close == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file__from);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 exit(100);
 }
-err_close = close(file__to);
+err_close = close(file_to);
 if (err_close == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file__from);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 exit(100);
 }
 return (0);
