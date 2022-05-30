@@ -21,6 +21,7 @@ if (!buff)
 return (0);
 nrd = read (fd, buff, letters);
 nwr = write(STDOUT_FILENO, buff, nrd);
-close(fd)
+close(fd);
 free(buff);
 return (nwr);
+}
