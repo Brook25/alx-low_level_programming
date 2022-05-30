@@ -18,12 +18,12 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 void close_Elf(int elf);
 
 /**
- * check_elf - Checks if a file is ELF
+ * check_Elf - Checks if a file is ELF
  * @e_ident: A pointer to an array containing the ELF magic numbers.
  *
  * Description: If the file is not an ELF file - exit code 98.
  */
-void check_elf(unsigned char *e_ident)
+void check_Elf(unsigned char *e_ident)
 {
 	int i;
 
@@ -32,7 +32,7 @@ void check_elf(unsigned char *e_ident)
 		if (e_ident[i] != 127 &&
 		    e_ident[i] != 'E' &&
 		    e_ident[i] != 'L' &&
-		    e_ident[index] != 'F')
+		    e_ident[i] != 'F')
 		{
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
@@ -41,12 +41,12 @@ void check_elf(unsigned char *e_ident)
 }
 
 /**
- * print_magic - Prints the magic numbers of an ELF header.
+ * print_mag - Prints the magic numbers of an ELF header.
  * @e_ident: A pointer to an array containing the ELF magic numbers.
  *
  * Description: Magic numbers are separated by spaces.
  */
-void print_magic(unsigned char *e_ident)
+void print_mag(unsigned char *e_ident)
 {
 	int i;
 
@@ -105,17 +105,17 @@ void print_data(unsigned char *e_ident)
 		break;
 	case ELFDATA2MSB:
 		printf("2's complement, big endian\n");
-		break;
+		break
 	default:
 		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
 
 /**
- * print_version - Prints the version of an ELF header.
+ * print_ver - Prints the version of an ELF header.
  * @e_ident: A pointer to an array containing the ELF version.
  */
-void print_version(unsigned char *e_ident)
+void print_ver(unsigned char *e_ident)
 {
 	printf("  Version:                           %d",
 	       e_ident[EI_VERSION]);
@@ -127,7 +127,7 @@ void print_version(unsigned char *e_ident)
 		break;
 	default:
 		printf("\n");
-		break;
+		break
 	}
 }
 
@@ -244,12 +244,12 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 }
 
 /**
- * close_elf - Closes an ELF file.
+ * close_Elf - Closes an ELF file.
  * @elf: The file descriptor of the ELF file.
  *
  * Description: If the file cannot be closed - exit code 98.
  */
-void close_elf(int elf)
+void close_Elf(int elf)
 {
 	if (close(elf) == -1)
 	{
