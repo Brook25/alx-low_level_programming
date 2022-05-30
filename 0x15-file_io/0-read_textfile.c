@@ -19,7 +19,7 @@ return (0);
 buff = malloc(sizeof(char) * (letters));
 if (!buff)
 return (0);
-nrd = read (fd, buff, letters);
+nrd = read(fd, buff, letters);
 nwr = write(STDOUT_FILENO, buff, nrd);
 close(fd);
 free(buff);
