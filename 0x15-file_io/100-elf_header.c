@@ -105,7 +105,7 @@ void print_data(unsigned char *e_ident)
 		break;
 	case ELFDATA2MSB:
 		printf("2's complement, big endian\n");
-		break
+		break;
 	default:
 		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
@@ -127,7 +127,7 @@ void print_ver(unsigned char *e_ident)
 		break;
 	default:
 		printf("\n");
-		break
+		break;
 	}
 }
 
