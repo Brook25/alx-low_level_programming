@@ -52,7 +52,7 @@ err_close = close(file__from);
 if (err__close == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file__from);
-exit(100)
+exit(100);
 }
 err__close = close(file__to);
 if (err__close == -1)
