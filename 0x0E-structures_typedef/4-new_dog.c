@@ -1,52 +1,63 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "dog.h"
 
-char *_strcpy(char *s)
+/**
+ * _strdup - returns pointer to an allocated space in memory
+ * that contains copy of the string parameter.
+ * @str: input string
+ * Return: character pointer
+ */
+
+char *_strdup(char *str)
 {
-char *copy;
-int i;
-for(i = 0; s[i] != '\0'; i++)
-;
-copy=malloc(i + 1);
-if (copy == NULL)
-{
-free(copy);
-return (NULL);
+	char *s;
+	unsigned int a = 0;
+	unsigned int b = 0;
+
+	if (str == NULL)
+		return (NULL);
+	while (str[a] != '\0')
+		a += 1;
+	a += 1;
+	s = malloc(a * sizeof(*s));
+	if (s == NULL)
+		return (NULL);
+	while (b < a)
+	{
+		s[b] = str[b];
+		b += 1;
+	}
+	return (s);
 }
-for(i = 0; s[i] != '\0'; i++)
-copy[i] = s[i];
-copy[i] = '\0';
-return (copy);
-}
+
+/**
+ *new_dog - function creates new dog
+ *@name: name of dog
+ *@age: age of dog
+ *@owner: owner
+ *Return: struct
+ */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *neww_dog;
-char *name_copy;
-char *owner_copy;
-name_copy = _strcpy(name);
-owner_copy = _strcpy(owner);
-neww_dog = malloc(sizeof(dog_t));
-if (neww_dog == NULL)
-{
-free (neww_dog);
-return (NULL);
-}
+	struct dog *new_dog;
 
-neww_dog->name = name_copy;
-if (neww_dog->name == NULL)
-{
-free (neww_dog);
-return(NULL);
-}
-neww_dog->age = age;
-neww_dog->owner = owner_copy;
-if (neww_dog->owner == NULL)
-{
-free (neww_dog->name);
-free (neww_dog);
-return (NULL);
-}
-return (neww_dog);
+	new_dog = malloc(sizeof(struct dog));
+	if (new_dog == NULL)
+		return (NULL);
+	new_dog->name = _strdup(name);
+	if (new_dog->name == NULL)
+	{
+		free(new_dog);
+		return (NULL);
+	}
+	new_dog->age = age;
+	new_dog->owner = _strdup(owner);
+	if (new_dog->owner == NULL)
+	{
+		free(new_dog);
+		free(new_dog->name);
+		return (NULL);
+	}
+	return (new_dog);
 }
