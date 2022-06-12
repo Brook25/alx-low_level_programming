@@ -40,7 +40,7 @@ dog_t *neww_dog;
 neww_dog = malloc(sizeof(dog_t));
 if (neww_dog == NULL)
 {
-free (neww_dog);
+free(neww_dog);
 return (NULL);
 }
 neww_dog->name = _strcpy(name);
