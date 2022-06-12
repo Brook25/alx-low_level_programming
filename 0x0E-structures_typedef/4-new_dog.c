@@ -1,63 +1,73 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdlib.h>
+#include <stdio.h>
 
-/**
- * _strdup - returns pointer to an allocated space in memory
- * that contains copy of the string parameter.
- * @str: input string
- * Return: character pointer
- */
-
-char *_strdup(char *str)
+char *_strcpy(char *s)
 {
-	char *s;
-	unsigned int a = 0;
-	unsigned int b = 0;
-
-	if (str == NULL)
-		return (NULL);
-	while (str[a] != '\0')
-		a += 1;
-	a += 1;
-	s = malloc(a * sizeof(*s));
-	if (s == NULL)
-		return (NULL);
-	while (b < a)
-	{
-		s[b] = str[b];
-		b += 1;
-	}
-	return (s);
+char *copy;
+int i;
+for(i=0;s[i]!='\0';i++)
+;
+copy=malloc(i+1);
+if (copy==NULL)
+{
+free(copy);
+return (NULL);
 }
-
-/**
- *new_dog - function creates new dog
- *@name: name of dog
- *@age: age of dog
- *@owner: owner
- *Return: struct
- */
+for (i=0;s[i]!='\0';i++)
+copy[i]=s[i];
+copy[i]='\0';
+return (copy);
+}
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *new_dog;
+dog_t *neww_dog;
+char *name_copy;
+char *owner_copy;
+name_copy=_strcpy(name);
+owner_copy=_strcpy(owner);
 
-	new_dog = malloc(sizeof(struct dog));
-	if (new_dog == NULL)
-		return (NULL);
-	new_dog->name = _strdup(name);
-	if (new_dog->name == NULL)
+neww_dog=malloc(sizeof(dog_t));
+if (neww_dog==NULL)
+{
+free (neww_dog);
+return (NULL);
+}
+neww_dog->name=name_copy;
+if(neww_dog->name==NULL)
+{
+free(neww_dog);
+return (NULL);
+}
+neww_dog->age=age;
+neww_dog->owner=owner_copy;
+if (neww_dog->owner==NULL)
+{
+free (neww_dog);
+free (neww_dog->name);
+return (NULL);
+}
+return (neww_dog);
+}
+
+int main(void)
+{
+	char *name = "Ghost";
+	char *owner = "Jon Snow";
+	dog_t *my_dog;
+
+	my_dog = new_dog(name, 4.75, owner);
+	if (my_dog == NULL)
 	{
-		free(new_dog);
-		return (NULL);
+		printf("Failed\n");
+		return (1);
 	}
-	new_dog->age = age;
-	new_dog->owner = _strdup(owner);
-	if (new_dog->owner == NULL)
+	if (my_dog->name == name || my_dog->owner == owner)
 	{
-		free(new_dog);
-		free(new_dog->name);
-		return (NULL);
+		printf("Duplicated strings should be stored in the allocated structure.\n");
+		return (1);
 	}
-	return (new_dog);
+	printf("My name is %s, I am %.2f, and my owner is %s\n", my_dog->name, my_dog->age, my_dog->owner);
+	return (0);
 }
