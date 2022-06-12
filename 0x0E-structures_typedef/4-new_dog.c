@@ -12,7 +12,7 @@ char *_strcpy(char *s)
 {
 char *copy;
 int i;
-for(i = 0; s[i] != '\0'; i++)
+for (i = 0; s[i] != '\0'; i++)
 ;
 copy = malloc(i + 1);
 if (copy == NULL)
