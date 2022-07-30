@@ -42,7 +42,7 @@ head = malloc(sizeof(hash_node_t));
 	if (head == NULL)
 	return (0);
 head->key = (char *) key;
-	if (key == NULL)
+	if (key == NULL || key == "")
 	return (0);
 
 head->value = __strdup(value);
