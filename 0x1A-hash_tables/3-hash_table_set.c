@@ -36,12 +36,12 @@ hash_node_t *head;
 if (ht == NULL)
 	return (0);
 
-index = key_index(key, sizeof(ht->array));
+index = key_index((const unsigned char *) key, sizeof(ht->array));
 
 head = malloc(sizeof(hash_node_t));
 	if (head == NULL)
 	return (0);
-head->key = key;
+head->key = (char *) key;
 	if (key == NULL)
 	return (0);
 
