@@ -1,97 +1,63 @@
 #include "hash_tables.h"
 
 /**
- * replace_value - replaces the value of a pre-existing key
- * @ht: double pointer to the hash_node_t list
- * @key: new key to add in the node
- * @value: value to add in the node
+ * hash_table_set - function that adds an element to the hash table
+ * @ht: is the hash table you want to add or update the key/value to
+ * @key: is the key input
+ * @value: is the value associated with the key
+ * Return: 1 if it succeeded, 0 otherwise
  */
-void replace_value(hash_node_t **ht, const char *key, const char *value)
+
+char *__strdup(const char *str)
 {
-	hash_node_t *temp = *ht;
+char *str1;
+int i = 0;
+str1 = malloc(sizeof(str));
 
-	while (temp && strcmp(temp->key, key))
-		temp = temp->next;
-
-	free(temp->value);
-	temp->value = strdup(value);
-}
-
-/**
- * check_key - checks if a key is present in a hash table
- * @ht: pointer to the hash_node_t list
- * @key: key to look for
- *
- * Return: 1 if the key is found, 0 otherwise
- */
-int check_key(hash_node_t *ht, const char *key)
-{
-	while (ht)
+while (*str != '\0')
 	{
-		if (!strcmp(ht->key, key))
-			return (1);
-		ht = ht->next;
+	*(str1 + i) = *str;
+	i++;
+	str++;
 	}
+*(str1 + i) = '\0';
 
-	return (0);
+return (str1);
 }
 
-/**
- * add_node - adds a new node at the start of a linked list
- * @head: double pointer to the hash_node_t list
- * @key: new key to add in the node
- * @value: value to add in the node
- *
- * Return: the address of the new element, or NULL if it fails
- */
-hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
-{
-	hash_node_t *new;
 
-	new = malloc(sizeof(hash_node_t));
-	if (!new)
-		return (NULL);
 
-	new->key = strdup(key);
-	new->value = strdup(value);
-
-	if (*head == NULL)
-	{
-		(*head) = new;
-		new->next = NULL;
-	} else
-	{
-		new->next = (*head);
-		(*head) = new;
-	}
-
-	return (*head);
-}
-
-/**
- * hash_table_set - adds an element to a hash table
- * @ht: hash table to add the element to
- * @key: key of the element, will give the index in the array
- * @value: value of the element to store in the array
- *
- * Return: 1 on success, 0 otherwise
- */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index;
+unsigned long int index;
+hash_node_t *head;
 
-	if (!ht || !key || !strcmp(key, "") || !value)
-		return (0);
 
-	index = key_index((unsigned char *)key, ht->size);
+if (ht == NULL)
+	return (0);
 
-	if (check_key(ht->array[index], key))
+index = key_index((const unsigned char *) key, sizeof(ht->array));
+
+head = malloc(sizeof(hash_node_t));
+	if (head == NULL)
+	return (0);
+head->key = (char *) key;
+	if (key == NULL)
+	return (0);
+
+head->value = __strdup(value);
+
+	if (ht->array[index] == NULL)
 	{
-		replace_value(&ht->array[index], key, value);
-		return (1);
+	(ht->array[index]) = head;
+	head->next = NULL;
 	}
-	add_node(&ht->array[index], key, value);
-	if (&ht->array[index] == NULL)
-		return (0);
-	return (1);
+
+	else
+	{
+	head->next = ht->array[index];
+	ht->array[index] = head;
+	}
+
+return (1);
 }
