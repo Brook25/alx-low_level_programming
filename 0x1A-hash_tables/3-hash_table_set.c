@@ -23,6 +23,33 @@ while (*str != '\0')
 return (str1);
 }
 
+/**
+ * __strcmp - function compares two strings
+ * @s1: First string to be compared
+ * @s2: Second string to be compared
+ * Return: 1 if success, 0 if not
+ */
+
+
+
+int __strcmp(char *s1, char *s2)
+{
+int i;
+
+if (strlen(s1) != strlen(s2))
+	return (0);
+
+for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++)
+{
+	if (s1[i] != s2[i])
+	return (0);
+}
+
+return (1);
+}
+
+
+
 
 
 /**
@@ -46,6 +73,17 @@ if (ht == NULL)
 	return (0);
 
 index = key_index((const unsigned char *) key, ht->size);
+
+temp = ht->array[index];
+while (temp != NULL && __strcmp((char *)key, temp->key) == 0)
+	temp = temp->next;
+
+if (temp != NULL)
+	{
+	free(temp->value);
+	temp->value = __strdup(value);
+	return (1);
+	}
 
 head = malloc(sizeof(hash_node_t));
 	if (head == NULL)
