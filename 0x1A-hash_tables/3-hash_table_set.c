@@ -30,8 +30,6 @@ return (str1);
  * Return: 1 if success, 0 if not
  */
 
-
-
 int __strcmp(char *s1, char *s2)
 {
 int i;
@@ -48,10 +46,6 @@ for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++)
 return (1);
 }
 
-
-
-
-
 /**
  * hash_table_set - adds an element to the hash table
  * @ht: hash table to add the element to
@@ -60,8 +54,6 @@ return (1);
  *
  * Return: 1 on success, 0 otherwise
  */
-
-
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
