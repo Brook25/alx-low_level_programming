@@ -68,7 +68,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 unsigned long int index;
 hash_node_t *head, *temp;
 
-
 if (ht == NULL)
 	return (0);
 
@@ -84,7 +83,6 @@ if (temp != NULL)
 	temp->value = __strdup(value);
 	return (1);
 	}
-
 head = malloc(sizeof(hash_node_t));
 	if (head == NULL)
 	return (0);
@@ -93,13 +91,11 @@ head->key = __strdup((char *) key);
 	return (0);
 
 head->value = __strdup(value);
-
 	if (ht->array[index] == NULL)
 	{
 	(ht->array[index]) = head;
 	head->next = NULL;
 	}
-
 	else
 	{
 	head->next = ht->array[index];
