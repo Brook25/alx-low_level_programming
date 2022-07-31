@@ -1,11 +1,9 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - function that adds an element to the hash table
- * @ht: is the hash table you want to add or update the key/value to
- * @key: is the key input
- * @value: is the value associated with the key
- * Return: 1 if it succeeded, 0 otherwise
+ * __strdup - duplicates a string with malloc
+ * @str: string to be duplicated
+ * Return: duplicated string
  */
 
 char *__strdup(const char *str)
@@ -24,6 +22,17 @@ while (*str != '\0')
 
 return (str1);
 }
+
+
+
+/**
+ * hash_table_set - adds an element to the hash table
+ * @ht: hash table to add the element to
+ * @key: key of the element, will give the index in the array
+ * @value: value of the element to store in the array
+ *
+ * Return: 1 on success, 0 otherwise
+ */
 
 
 
