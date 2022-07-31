@@ -36,7 +36,7 @@ hash_node_t *head;
 if (ht == NULL)
 	return (0);
 
-index = key_index((const unsigned char *) key, sizeof(ht->array));
+index = key_index((const unsigned char *) key, ht->size);
 
 head = malloc(sizeof(hash_node_t));
 	if (head == NULL)
