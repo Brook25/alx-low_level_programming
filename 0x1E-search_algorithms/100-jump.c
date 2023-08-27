@@ -1,5 +1,12 @@
 #include "search_algos.h"
 
+/**
+ * jump_search - does a jump search on an array to find
+ * a given value
+ * @size: size of the array
+ * @value: value to find the index of
+ * Return: index of the value or -1 if not found
+ */
 int jump_search(int *array, size_t size, int value)
 {
 	size_t jump = sqrt(size);
